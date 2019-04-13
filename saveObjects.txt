@@ -1,0 +1,26 @@
+{
+  "activeObjectNumber": 3,
+  "shapeList": [
+    {
+      "objectType": "Triangle",
+      "x": 20.0,
+      "y": 60.0,
+      "diameter": 30,
+      "count": 1
+    },
+    {
+      "objectType": "Ball",
+      "x": 0.0,
+      "y": 0.0,
+      "diameter": 30,
+      "count": 2
+    },
+    {
+      "objectType": "Square",
+      "x": 105.0,
+      "y": 115.0,
+      "diameter": 30,
+      "count": 3
+    }
+  ]
+}

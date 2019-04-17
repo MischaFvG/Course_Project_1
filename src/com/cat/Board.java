@@ -194,7 +194,6 @@ public class Board {
                 }
             }
             if (current.getClass() == Ball.class || current.getClass() == Square.class || current.getClass() == Triangle.class) {
-                ObjectsGroup tmpObjectsGroup = new ObjectsGroup(graphicsContext, count);
                 for (ObjectsGroup objectsGroup : objectsGroupList) {
                     List<Shape> shapes = objectsGroup.getShapeList();
                     for (Shape shape : shapes) {

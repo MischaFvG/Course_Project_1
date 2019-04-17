@@ -83,7 +83,7 @@ public class ObjectsGroup implements Shape {
 
     @Override
     public int getCount() {
-        return 0;
+        return count;
     }
 
     @Override

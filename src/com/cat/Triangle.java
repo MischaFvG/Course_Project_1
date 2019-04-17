@@ -25,4 +25,9 @@ public class Triangle extends BasicShape {
         graphicsContext.setLineWidth(5);
         graphicsContext.strokePolygon(xPoints, yPoints, 3);
     }
+
+    @Override
+    public void addObjectToGroup(Shape shape) {
+
+    }
 }

@@ -24,4 +24,9 @@ public class Ball extends BasicShape {
         graphicsContext.strokeOval(x, y, diameter, diameter);
     }
 
+    @Override
+    public void addObjectToGroup(Shape shape) {
+
+    }
+
 }

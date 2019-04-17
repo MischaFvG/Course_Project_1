@@ -23,4 +23,9 @@ public class Square extends BasicShape {
         graphicsContext.strokeRect(x, y, diameter, diameter);
     }
 
+    @Override
+    public void addObjectToGroup(Shape shape) {
+
+    }
+
 }

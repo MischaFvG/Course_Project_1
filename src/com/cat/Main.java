@@ -7,6 +7,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -78,6 +80,14 @@ public class Main extends Application {
                     board.readObjectsFromFile();
                 }
                 board.draw();
+            }
+        });
+        scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.isShiftDown() && event.getButton() == MouseButton.PRIMARY) {
+                    board.groupObjects(event.getX(), event.getY());
+                }
             }
         });
     }

@@ -24,4 +24,6 @@ public interface Shape {
     double getY();
 
     int getDiameter();
+
+    void addObjectToGroup(Shape shape);
 }

@@ -35,6 +35,21 @@ public class ReadObjectsFromFile {
             if (shapesList.objectType.equals("Triangle")) {
                 shapes.add(new Triangle(shapesList.x, shapesList.y, graphicsContext, shapesList.diameter, shapesList.count));
             }
+            if (shapesList.objectType.equals("Group")) {
+                ObjectsGroup objectsGroup = new ObjectsGroup(graphicsContext, shapesList.count);
+                for (ShapesList shapesList1 : shapesList.shapeList) {
+                    if (shapesList1.objectType.equals("Ball")) {
+                        objectsGroup.addObjectToGroup(new Ball(shapesList1.x, shapesList1.y, graphicsContext, shapesList1.diameter, shapesList1.count));
+                    }
+                    if (shapesList1.objectType.equals("Square")) {
+                        objectsGroup.addObjectToGroup(new Square(shapesList1.x, shapesList1.y, graphicsContext, shapesList1.diameter, shapesList1.count));
+                    }
+                    if (shapesList1.objectType.equals("Triangle")) {
+                        objectsGroup.addObjectToGroup(new Triangle(shapesList1.x, shapesList1.y, graphicsContext, shapesList1.diameter, shapesList1.count));
+                    }
+                }
+                shapes.add(objectsGroup);
+            }
         }
         return shapes;
     }

@@ -264,6 +264,11 @@ public class Board {
             shapeList = readObjectsFromFile.createListOfShapes(graphicsContext);
             activeNumber = readObjectsFromFile.getActiveObjectNumber();
             count = shapeList.size() + 1;
+            for (Shape shape : shapeList) {
+                if (shape.getClass() == ObjectsGroup.class) {
+                    objectsGroupList.add((ObjectsGroup) shape);
+                }
+            }
         }
     }
 
